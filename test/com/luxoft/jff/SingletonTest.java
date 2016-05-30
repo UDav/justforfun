@@ -19,7 +19,7 @@ public class SingletonTest {
         Assert.assertEquals(s1, s2);
     }
 
-    @Test
+    @Test(expected = java.lang.reflect.InvocationTargetException.class)
     public void twoDifferentObjects() throws InvocationTargetException, InstantiationException, IllegalAccessException {
         final Singleton s1 = Singleton.getInstance();
 

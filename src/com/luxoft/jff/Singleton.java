@@ -6,7 +6,11 @@ package com.luxoft.jff;
 public class Singleton {
     private final static Singleton INSTANCE = new Singleton();
 
-    private Singleton () {}
+    private Singleton () {
+        if (INSTANCE != null) {
+            throw new IllegalConstructException();
+        }
+    }
 
     public static Singleton getInstance() {
         return INSTANCE;
