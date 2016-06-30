@@ -28,6 +28,6 @@ public class SingletonTest {
         final Singleton s2 = (Singleton) constructor.newInstance();
         System.out.println(s1);
         System.out.println(s2);
-        Assert.assertNotEquals(s1, s2);
+        Assert.assertNotSame(s1, s2);
     }
 }
